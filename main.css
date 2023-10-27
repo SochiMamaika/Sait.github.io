@@ -1,0 +1,7 @@
+body{font-family: 'Times New Roman', Times, serif;}
+h1{font-size: 50;color: #ffffff}
+h2{font-size: 35;color: #ffffff;}
+p{font-size: 28; color: #ffffff;}
+html{ 
+    background: url(7.jpg); background-attachment: auto;
+    height: 600%;width: 100%;}
