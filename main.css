@@ -1,13 +1,9 @@
 header{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif; width: 103%;
 }
 
 hr{
     background-color: rgb(255, 255, 255); height: 5;
-}
-
-body{
-    margin-right: 0%; margin-left: 0%;
 }
 
 h1{
@@ -27,15 +23,17 @@ html{
     height: 400%;width: 100%;
 }
 
-div.image_gallery{
-    margin: 0;
+div.image{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 1850;
     max-width: 100%;
-    height: auto;
-    min-width: 300px;
+    min-width: 500px;
 }
 
 img{
-    height: 900; width: 1800; display: block; margin: 0 auto;
-     border-radius: 10%; box-shadow: 0 0 15px 10px;
-     color: #ffffff;
+    right: 50; align-self: center;
+    height: 900; width: 1850; 
+    border-radius: 10%; box-shadow: 0 0 15px 10px; color: #ffffff;
 }
