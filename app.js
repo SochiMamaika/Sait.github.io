@@ -1,17 +1,23 @@
-let nam;
-let boo=true;
-nam="Yarik";
-const header = document.querySelector("#header") /* queryselector выделяет рабочую область и заносит в переменную для дальнейшего изменения*/
-console.log(nam, typeof boo,header);
-function simpleMath(a,b){
-    let result = a+b;
-    return result
+
+function toggleTheme() {
+    document.body.classList.toggle('light');
 }
-let sum = simpleMath(33, 52);
-console.log(sum);
-if (window.devicePixelRatio !== 1) { // Костыль для определения иных устройств, с коэффициентом отличным от 1		
-    var dpt = window.devicePixelRatio;
-    var widthM = window.screen.width * dpt;
-    var widthH = window.screen.height * dpt;
-    document.write('<meta name="viewport" content="width=' + widthM+ ', height=' + widthH + '">');
+
+  // Открытие модального окна при клике на фото
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  document.querySelectorAll(".gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  function closeModal() {
+    modal.style.display = "none";
+  }
+
+  // Переключатель темы
+  function toggleTheme() {
+    document.body.classList.toggle('light');
   }

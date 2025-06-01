@@ -1,84 +1,75 @@
-<DOCTYPE! HTML>
-<html style="max-width: 100%;">
-
-<head style="max-width: 100%;">
-
-<header class="header" id="header">
-
-<div class="h1">
-<h1 style="text-align: center;">Сочи одежда
-</h1> <! h это заголовки>
-</div>
-
-<div class="lines1">
-<hr><! это полоса>
-</div>
-
-<p>Официальный магазин одежды, широкий ассортимент женской и
-мужской одежды.</p>
-
-<p>Качественные и удобные вещи, отдельно представлен мужской и женский каталог одежды.</p>
-<p>Находимся по адресу г.Сочи, р-н Мамайка, ул.Крымская 25А, ТЦ Мамайка, 2 этаж.</p>
-<p>Телефон для связи +7-913-533-24-10 ИЛИ +7-913-532-77-69</p>
-<p><a href="https://t.me/Sochi_Mamaika_bot">Нажмите здесь для перехода в наш телеграм канал</a></p>
-
-<div class="lines2">
-<hr>
-</div>
-<div class="h2">
-<h2 style="text-align: center;">Фотографии нашего магазина
-</h2>
-</div>
-<br>
-
-</header>
-
-<title>
-"WEB"
-</title>
-
-<link rel="stylesheet" type="text/css" href="main.css">
-
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сочи одежда</title>
+  <link rel="stylesheet" href="main.css">
 </head>
+<body>
 
-<body style="max-width: 100%;">
-<div class="image">
+  <!-- Навигация -->
+  <header class="navbar">
+    <h1>Сочи одежда</h1>
+    <nav>
+      <a href="#about">О нас</a>
+      <a href="#gallery">Фото магазина</a>
+      <button onclick="toggleTheme()">🌗 Тема</button>
+    </nav>
+  </header>
 
-<div class="photo5"><!создан блок который можно редактировать в css>
-<img src="img/9min.jpg">
-</div>
-<br><br><br><br><br><br> <!переход на новую строчку>
+  <!-- Галерея -->
+  <section id="gallery" class="gallery-section">
+    <h2>Фото нашего магазина</h2>
+    <div class="gallery">
+      <img src="img/9min.jpg" alt="Магазин 1">
+      <img src="img/3.jpg" alt="Магазин 2">
+      <img src="img/4.jpg" alt="Магазин 3">
+      <img src="img/5.jpg" alt="Магазин 4">
+      <img src="img/6.jpg" alt="Магазин 5">
+      <img src="img/10.jpg" alt="Магазин 6">
+      <img src="img/11.jpg" alt="Магазин 7">
+    </div>
+  </section>
 
-<div class="photo1"><!создан блок который можно редактировать в css>
-<img src="img/3.jpg">
-</div>
-<br><br><br><br><br><br>
+  <!-- О нас -->
+  <section id="about" class="about-section">
+    <h2>О нас</h2>
+    <p>Официальный магазин одежды в Сочи. Мужской и женский ассортимент, стиль и удобство.</p>
+    <p>📍 Адрес: г. Сочи, р-н Мамайка, ул. Крымская 25А, ТЦ Мамайка, 2 этаж</p>
+    <p>📞 Телефон: +7-913-533-24-10 | +7-913-532-77-69</p>
+    <p>💬 <a href="https://t.me/Sochi_Mamaika_bot" target="_blank">Наш Telegram-бот</a></p>
+  </section>
+    <!-- Модальное окно для фото -->
+    <div id="modal" class="modal" onclick="closeModal()">
+    <img id="modal-img" src="" alt="Просмотр изображения">
+    </div>
 
-<div class="photo2">
-<img src="img/4.jpg">
-</div>
-<br><br><br><br><br><br>
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+    }
+  </script>
 
-<div class="photo3">
-<img src="img/5.jpg">
-</div>
-<br><br><br><br><br><br>
+  <script>
+  // Открытие модального окна при клике на фото
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  document.querySelectorAll(".gallery img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
 
-<div class="photo4">
-<img src="img/6.jpg">
-<br><br><br><br><br><br>
-</div>
+  function closeModal() {
+    modal.style.display = "none";
+  }
 
-<div class="photo7">
-<img src="img/10.jpg">
-</div>
-<br><br><br><br><br><br>
-
-<div class="photo7">
-<img src="img/11.jpg">
-</div>
-<br><br><br><br><br><br>
-
-</div>
+  // Переключатель темы
+  function toggleTheme() {
+    document.body.classList.toggle('light');
+  }
+</script>
 </body>
-<script src="app.js"></script>
+</html>
