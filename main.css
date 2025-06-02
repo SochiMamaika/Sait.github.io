@@ -1,148 +1,148 @@
 /* === Базовая тема === */
 :root {
-  --bg-color: #121212;
-  --text-color: #ffffff;
-  --accent-color: #00ffff;
-  --card-color: #1e1e2f;
-  --hover-glow: 0 0 20px var(--accent-color);
+  --bg-color: #121212; /* Цвет фона по умолчанию */
+  --text-color: #ffffff; /* Цвет текста по умолчанию */
+  --accent-color: #00ffff; /* Акцентный цвет (например, ссылки) */
+  --card-color: #1e1e2f; /* Цвет карточек, панелей */
+  --hover-glow: 0 0 20px var(--accent-color); /* Эффект свечения при наведении */
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  scroll-behavior: smooth;
-  transition: background-color 0.3s, color 0.3s;
+  margin: 0; /* Убираем отступы по краям */
+  font-family: 'Segoe UI', sans-serif; /* Шрифт страницы */
+  background-color: var(--bg-color); /* Фон из переменной */
+  color: var(--text-color); /* Цвет текста из переменной */
+  scroll-behavior: smooth; /* Плавная прокрутка */
+  transition: background-color 0.5s, color 0.5s; /* Плавное изменение цветов */
 }
 
 /* === Светлая тема === */
 body.light {
-  --bg-color: #f5f5f5;
-  --text-color: #121212;
-  --accent-color: #007bff;
-  --card-color: #ffffff;
-  --hover-glow: 0 0 15px var(--accent-color);
+  --bg-color: #f5f5f5; /* Светлый фон */
+  --text-color: #121212; /* Тёмный текст */
+  --accent-color: #007bff; /* Синий акцент */
+  --card-color: #ffffff; /* Белые карточки */
+  --hover-glow: 0 0 15px var(--accent-color); /* Меньшее свечение */
 }
 
 /* === Навигация === */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--card-color);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  display: flex; /* Расположение в строку */
+  justify-content: space-between; /* Распределение по краям */
+  align-items: center; /* Выравнивание по центру по вертикали */
+  padding: 1rem 2rem; /* Внутренние отступы */
+  background-color: var(--card-color); /* Цвет фона навигации */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Тень снизу */
+  position: sticky; /* "Прикрепляется" к верху при прокрутке */
+  top: 0; /* Положение сверху */
+  z-index: 1000; /* Поверх других элементов */
 }
 
 .navbar h1 {
-  font-size: 1.5rem;
-  color: var(--accent-color);
+  font-size: 1.5rem; /* Размер заголовка */
+  color: var(--accent-color); /* Акцентный цвет */
 }
 
 .navbar nav {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+  display: flex; /* Горизонтальное меню */
+  gap: 1rem; /* Промежуток между пунктами */
+  align-items: center; /* Центровка по вертикали */
 }
 
 .navbar a, .navbar button {
-  background: none;
-  border: none;
-  color: var(--accent-color);
-  font-weight: bold;
-  cursor: pointer;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: 0.3s;
+  background: none; /* Прозрачный фон */
+  border: none; /* Без рамки */
+  color: var(--accent-color); /* Цвет текста */
+  font-weight: bold; /* Жирный текст */
+  cursor: pointer; /* Курсор — палец */
+  font-size: 1rem; /* Размер текста */
+  text-decoration: none; /* Без подчёркивания */
+  transition: 0.3s; /* Плавность при наведении */
 }
 
 .navbar a:hover, .navbar button:hover {
-  color: var(--text-color);
+  color: var(--text-color); /* Меняем цвет текста при наведении */
 }
 
 /* === Галерея === */
 .gallery-section {
-  padding: 2rem;
-  text-align: center;
+  padding: 2rem; /* Отступы */
+  text-align: center; /* Центрирование текста */
 }
 
 .gallery-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem; /* Размер заголовка */
+  margin-bottom: 1.5rem; /* Отступ снизу */
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  display: grid; /* Сетка */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивные колонки */
+  gap: 1.5rem; /* Расстояние между колонками */
+  padding: 0.5rem; /* Внутренние отступы */
 }
 
 .gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  cursor: pointer;
+  width: 100%; /* На всю ширину блока */
+  height: 100%; /* На всю высоту блока */
+  object-fit: cover; /* Обрезать изображение по блоку */
+  border-radius: 12px; /* Скругление углов */
+  transition: transform 0.3s, box-shadow 0.3s; /* Плавные эффекты */
+  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Тень */
+  cursor: pointer; /* Курсор — палец */
 }
 
 .gallery img:hover {
-  transform: scale(1.03);
-  box-shadow: var(--hover-glow);
+  transform: scale(1.1); /* Немного увеличиваем при наведении */
+  box-shadow: var(--hover-glow); /* Подсвечиваем */
 }
 
 /* === О нас === */
 .about-section {
-  background-color: var(--card-color);
-  padding: 2rem;
-  text-align: center;
+  background-color: var(--card-color); /* Цвет фона секции */
+  padding: 2rem; /* Отступы */
+  text-align: center; /* Центровка текста */
 }
 
 .about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2rem; /* Размер заголовка */
+  margin-bottom: 1rem; /* Отступ снизу */
 }
 
 .about-section p {
-  font-size: 1.1rem;
-  margin: 0.5rem 0;
+  font-size: 1.1rem; /* Размер шрифта текста */
+  margin: 0.5rem 0; /* Вертикальные отступы */
 }
 
 .about-section a {
-  color: var(--accent-color);
-  text-decoration: none;
-  font-weight: bold;
+  color: var(--accent-color); /* Акцентный цвет ссылки */
+  text-decoration: none; /* Без подчёркивания */
+  font-weight: bold; /* Жирный текст */
 }
+
 /* === Модальное окно === */
 .modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  cursor: zoom-out;
+  display: none; /* По умолчанию скрыто */
+  position: fixed; /* Фиксированное позиционирование */
+  top: 0; left: 0; /* Положение сверху-слева */
+  width: 100%; height: 100%; /* На весь экран */
+  background: rgba(0,0,0,0.8); /* Тёмный полупрозрачный фон */
+  justify-content: center; /* Центровка по горизонтали */
+  align-items: center; /* Центровка по вертикали */
+  z-index: 9999; /* Поверх всего */
+  cursor: zoom-out; /* Курсор "уменьшения" */
 }
 
 .modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 30px var(--accent-color);
-  animation: zoomIn 0.3s ease;
-  margin-right: 1;
+  max-width: 90%; /* Максимальная ширина */
+  max-height: 90%; /* Максимальная высота */
+  border-radius: 10px; /* Скругление углов */
+  box-shadow: 0 0 30px var(--accent-color); /* Яркое свечение */
+  animation: zoomIn 0.3s ease; /* Анимация появления */
+  margin-right: 1; /* Неправильная строка, можно удалить или исправить */
 }
 
 @keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+  from { transform: scale(0.8); opacity: 0; } /* Начало: уменьшено и прозрачно */
+  to { transform: scale(1); opacity: 1; }     /* Конец: нормальный размер и видно */
 }
-
