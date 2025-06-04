@@ -5,6 +5,7 @@
   --accent-color: #00ffff; /* Акцентный цвет (например, ссылки) */
   --card-color: #1e1e2f; /* Цвет карточек, панелей */
   --hover-glow: 0 0 20px var(--accent-color); /* Эффект свечения при наведении */
+  --shaddow-color: #ffffff;
 }
 
 body {
@@ -23,6 +24,7 @@ body.light {
   --accent-color: #007bff; /* Синий акцент */
   --card-color: #ffffff; /* Белые карточки */
   --hover-glow: 0 0 15px var(--accent-color); /* Меньшее свечение */
+  --shaddow-color: #000000;
 }
 
 /* === Навигация === */
@@ -88,13 +90,13 @@ body.light {
   object-fit: cover; /* Обрезать изображение по блоку */
   border-radius: 12px; /* Скругление углов */
   transition: transform 0.3s, box-shadow 0.3s; /* Плавные эффекты */
-  box-shadow: 0 0 10px rgba(0,0,0,0.3); /* Тень */
+  box-shadow: 0 0 20px rgba(0,0,0,0.3); /* Тень */
   cursor: pointer; /* Курсор — палец */
 }
 
 .gallery img:hover {
   transform: scale(1.1); /* Немного увеличиваем при наведении */
-  box-shadow: var(--hover-glow); /* Подсвечиваем */
+  box-shadow: 0 0 20px var(--shaddow-color); /* Подсвечиваем */
 }
 
 /* === О нас === */
@@ -137,7 +139,7 @@ body.light {
   max-width: 90%; /* Максимальная ширина */
   max-height: 90%; /* Максимальная высота */
   border-radius: 10px; /* Скругление углов */
-  box-shadow: 0 0 30px var(--accent-color); /* Яркое свечение */
+  box-shadow: 0 0 20px var(--shaddow-color); /* Яркое свечение */
   animation: zoomIn 0.3s ease; /* Анимация появления */
   margin-right: 1; /* Неправильная строка, можно удалить или исправить */
 }
